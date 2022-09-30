@@ -25,7 +25,7 @@
 
 <body>  
 	 <!-- HTML template -->
-	  <div id="htop">
+	  <div class="result">
 		Hello <span></span>
 	  </div>
 
@@ -39,6 +39,8 @@
 		};
 		//render the template
 		$p( '#htop' ).render( data, directive );
+
+		$p( '.result' ).render( data, directive );
 	  </script>
 	
 
