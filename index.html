@@ -19,10 +19,18 @@
 
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+	<!-- <script src="https://unpkg.com/nunjucks@3.2.3/browser/nunjucks.js"></script> -->
+	<script src="https://mozilla.github.io/nunjucks/files/nunjucks-slim.js"></script>
 
+	
 </head> 
 
 <body>    
+
+	<script>
+nunjucks.configure('views', { autoescape: true });
+nunjucks.render('docs-page.html', { foo: 'bar' });
+</script>
     <header class="header fixed-top">	 
 	       
         <div class="branding docs-branding">
