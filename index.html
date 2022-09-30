@@ -19,18 +19,29 @@
 
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-	<!-- <script src="https://unpkg.com/nunjucks@3.2.3/browser/nunjucks.js"></script> -->
-	<script src="https://mozilla.github.io/nunjucks/files/nunjucks-slim.js"></script>
+	<script src="http://pure.github.io/pure/libs/pure.js"></script>
 
-	
 </head> 
 
-<body>    
+<body>  
+	 <!-- HTML template -->
+	  <div id="htop">
+		Hello <span></span>
+	  </div>
 
-<script>
-nunjucks.configure('views', { autoescape: true });
-nunjucks.render('docs-page.html', { foo: 'bar' });
-</script>
+	  <script>
+	
+		var data = {
+		  'who': 'BeeBole!'
+		},
+		  directive = {
+		  'span': 'who' //look for the SPAN, set its text to the value of property 'who'
+		};
+		//render the template
+		$p( '#htop' ).render( data, directive );
+	  </script>
+	
+
     <header class="header fixed-top">	 
 	       
         <div class="branding docs-branding">
